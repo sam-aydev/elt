@@ -1,0 +1,13 @@
+data_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: process.env.SNOWFLAKE_ACCOUNT
+      user: process.env.SNOWFLAKE_USER
+      password: process.env.SNOWFLAKE_PASSWORD
+      role: process.env.SNOWFLAKE_ROLE
+      warehouse: process.env.SNOWFLAKE_WAREHOUSE
+      database: dbt_db
+      schema: dbt_schema
+      threads: 1
